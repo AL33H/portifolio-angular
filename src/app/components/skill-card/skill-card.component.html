@@ -1,8 +1,5 @@
-<section>
-  <div>
-    <h2>{{ skill.name }}</h2>
+<div class="skills-grid">
+  <div class="skill-card" *ngFor="let skill of skills">
+    <img src="{{skill.img}}" alt="Descrição da Skill 1" class="skill-image">
   </div>
-  <div>
-    <img src={{ skill.img }} alt="">
-  </div>
-</section>
+</div>

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Skill } from 'src/app/service/skill.service';
 
 @Component({
   selector: 'app-skill-card',
@@ -7,17 +8,14 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SkillCardComponent implements OnInit {
 
-  @Input() skill: Skill;
+  @Input() skills: Skill[];
 
   constructor() { }
 
   ngOnInit() {
+    console.log(this.skills)
   }
 
 }
 
 
-interface Skill {
-  name: string;
-  img: string;
-}

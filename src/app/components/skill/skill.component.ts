@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Skill, SkillService } from 'src/app/service/skill.service';
 
 
 @Component({
@@ -7,12 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./skill.component.css'],
 })
 export class SkillComponent implements OnInit {
-  
 
+  constructor(private skillService: SkillService) { }
 
-  constructor() { }
+  allSkills: Skill[]
 
   ngOnInit() {
+    this.allSkills = this.skillService.getAllSkills()
   }
 
 }
