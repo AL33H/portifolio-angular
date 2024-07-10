@@ -6,11 +6,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { SkillComponent } from './components/skill/skill.component';
-import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MatCardModule } from '@angular/material';
 import { SkillCardComponent } from './components/skill-card/skill-card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProjectsComponent } from './projects/projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -19,9 +19,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     AboutComponent,
     SkillComponent,
-    ExperienciaComponent,
     FooterComponent,
-    SkillCardComponent
+    SkillCardComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,

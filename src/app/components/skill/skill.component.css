@@ -1,7 +1,0 @@
-.card-list {
-    flex: auto;
-    flex-direction: row;
-    flex-wrap: wrap;
-    flex-shrink: calc();
-    gap: 5px;
-}
