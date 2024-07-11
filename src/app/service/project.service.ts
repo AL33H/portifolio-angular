@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 
 export interface Project {
   name: string;
-  img: string;
   desc: string
   link: string
   linkGithub: string
@@ -15,15 +14,15 @@ export interface Project {
 @Injectable({
   providedIn: 'root'
 })
-export class ServiceService {
+export class ProjectService {
 
   constructor() { }
 
   getAllProjects() {
+
     const projectsList: Project[] = [
       {
         name: "BarEasy Java e Angular",
-        img: "",
         desc: "Implementação de projeto pessoal como MVP para tratar implementações padrões com designer patterns, concorrência, de arquitetura de um sistema de bar.",
         link: "",
         linkGithub: "https://github.com/AL33H/BarEasy",
@@ -32,7 +31,6 @@ export class ServiceService {
       },
       {
         name: "Portfólio com Vaadin framework Java",
-        img: "",
         desc: "Portifólio para aprendizado a qual, em três horas lendo a documentação consegui implementar um projeto com Vaadin e hospedar na AWS.",
         link: "http://aleff.sa-east-1.elasticbeanstalk.com/",
         linkGithub: "https://github.com/AL33H/portifolio",
@@ -41,7 +39,6 @@ export class ServiceService {
       },
       {
         name: "Portfólio com react",
-        img: "",
         desc: "Implementação de portifolio com react afim de aprendizado.",
         link: "",
         linkGithub: "https://github.com/AL33H/portifolio-react",
@@ -50,16 +47,22 @@ export class ServiceService {
       },
       {
         name: "Java, Python, Kotlin e Go Teste",
-        img: "",
         desc: "Projeto de linguagens diferente para aprendizado de sintaxe.",
         link: "",
         linkGithub: "https://github.com/AL33H/JavaTest",
         data: "06/2023",
-        tags: ["#Java", "#Spring", "Python", "#Flask", "#SQLAlchy", "#Kotlin", "#Go"]
+        tags: ["#Java", "#Spring", "#Python", "#Flask", "#SQLAlchy", "#Kotlin", "#Go"]
+      },
+      {
+        name: "Discord bot",
+        desc: "Criei alguns bots de discord com Java, Go e Python afim de optimizar processos com integração no Jira, Gitlab, Selenium e várias implementações distintas, como gerar documentação automatizada.",
+        link: "",
+        linkGithub: "https://github.com/AL33H/",
+        data: "06/2023",
+        tags: ["#Java", "#Spring", "#Python", "#Flask", "#SQLAlchy", "#Kotlin", "#Go"]
       },
       {
         name: "Java Concorrency template",
-        img: "",
         desc: "Template para implementação concorrência de jobs no cliente, criei o template para testes pré-implementação, e posteriormente no cliente com sucesso.",
         link: "",
         linkGithub: "https://github.com/AL33H/java-competion",
@@ -68,7 +71,6 @@ export class ServiceService {
       },
       {
         name: "OceanAgendas",
-        img: "",
         desc: "Criar um sistema web voltado para prestação de serviços por agendamento. A ideia inicial é criar com as linguagens Java + SpringBoot, Angular e banco de dados com Oracle.",
         link: "",
         linkGithub: "https://github.com/AL33H/OceanAgendas",
@@ -77,7 +79,6 @@ export class ServiceService {
       },
       {
         name: "Dino Game",
-        img: "",
         desc: "Replicar o jogo do Dino games para afins de treinamento.",
         link: "https://github.com/AL33H/Dino-game",
         linkGithub: "",
@@ -86,7 +87,6 @@ export class ServiceService {
       },
       {
         name: "Semana devsuperior Nélio Alves",
-        img: "",
         desc: "O projeto dsvenda é um projeto Full Stack da plataforma da devsuperior, hospedando Backend e banco de dados no Heroku e FrontEnd no Netlify.",
         link: "https://dsvendas-aleff.netlify.app/",
         linkGithub: "https://dsvendas-aleff.netlify.app/",
@@ -94,14 +94,14 @@ export class ServiceService {
         tags: ["#Java", "#Spring", "#Angular", "#Netlify"]
       },
       {
-        name: "Semana devsuperior Nélio Alves",
-        img: "",
+        name: "BarberSystem",
         desc: "BarberSystem é um projeto de software de barbearia que foi intitulado como projeto final do Instituto federal do Ceará (IFCE),",
         link: "",
         linkGithub: "https://github.com/AL33H/BarberSystemJava",
         data: "01/2020",
-        tags: ["#Java", "JavaSwing"]
+        tags: ["#Java", "#JavaSwing"]
       },
     ]
+    return projectsList;
   }
 }

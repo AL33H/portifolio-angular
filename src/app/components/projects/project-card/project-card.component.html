@@ -1,4 +1,19 @@
-<section><div>
-  <div></div>
-  <div></div>
-</div></section>
+<section>
+  <div class="content">
+    <div *ngFor="let project of projects">
+      <div class="project-card">
+        <!-- <img src="https://via.placeholder.com/300" alt="Project Image"> -->
+        <h3>{{project.name}}</h3>
+        <p>{{project.desc}}</p>
+        <p><strong>Data:</strong> {{project.data}}</p>
+        <div class="tags">
+          <div *ngFor="let tag of project.tags">
+            <span>{{tag}}</span>
+          </div>
+        </div>
+        <p><a href="{{project.linkGithub}}" target="_blank">Github Repository</a></p>
+        <p *ngIf="project.link"><a href="{{project.link}}" target="_blank">Project Link</a></p>
+      </div>
+    </div>
+  </div>
+</section>
