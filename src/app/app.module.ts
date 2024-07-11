@@ -8,9 +8,10 @@ import { AboutComponent } from './components/about/about.component';
 import { SkillComponent } from './components/skill/skill.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MatCardModule } from '@angular/material';
-import { SkillCardComponent } from './components/skill-card/skill-card.component';
+import { SkillCardComponent } from './components/skill/skill-card/skill-card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ProjectsComponent } from './projects/projects/projects.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { ProjectCardComponent } from './components/projects/project-card/project-card.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ProjectsComponent } from './projects/projects/projects.component';
     SkillComponent,
     FooterComponent,
     SkillCardComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    ProjectCardComponent
   ],
   imports: [
     BrowserModule,
